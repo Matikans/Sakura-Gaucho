@@ -2,8 +2,8 @@
 node_modules/
 
 # Archivos de entorno (NUNCA subas .env real)
-.env
-.env.*.local
+#.env
+#.env.*.local
 
 # Archivos de log
 *.log
@@ -25,4 +25,4 @@ Thumbs.db
 .vscode/
 
 # Reservas locales (si no querés subir los datos reales)
-reservas.json
+#reservas.json

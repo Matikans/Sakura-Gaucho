@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/normalize.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/login.css">
+
     <title>Login</title>
 </head>
 <body>
-    <h1>Login Admin</h1>
-    <form action="/login" method="POST">
+    <h1 class="title-login">Login Admin</h1>
+    <form class="form-login" action="/login" method="POST">
       <label for="user">Usuario:</label>
       <input type="text" id="user" name="user" required>
-      <br>
       <label for="pass">Contraseña:</label>
       <input type="password" id="pass" name="pass" required>
-      <br>
       <button type="submit">Iniciar sesión</button>
     </form>
 </body>

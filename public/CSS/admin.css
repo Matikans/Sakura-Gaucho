@@ -1,0 +1,28 @@
+.reservas-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reservas-table th,
+.reservas-table td {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: left;
+}
+
+.reservas-table th {
+  background-color: var(--primary-color);
+}
+.reservas-table tr{
+    background-color: var(--secondary-color);
+}
+
+.reservas-table button {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  align-self: center;
+}

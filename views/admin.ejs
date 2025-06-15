@@ -3,27 +3,49 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/normalize.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/admin.css">
+
     <title>Administrador</title>
 </head>
 <body>
-    <h1>Reservas</h1>
-    <table border="1" cellpadding="10" cellspacing="0">
-      <tr>
-        <th>Nombre</th>
-        <th>Fecha</th>
-        <th>Hora</th>
-        <th>Número de Mesa</th>
-        <th>Número de Invitados</th>
-      </tr>
-       <% reservas.forEach(reserva => { %>
-      <tr>
-        <td><%=reserva.name %></td>
-        <td><%=reserva.date%></td>
-        <td><%=reserva.time%></td>
-        <td><%=reserva.num%></td>
-        <td><%=reserva.guests%></td>
-      </tr>
-  <%})%>
+  <h1>Panel de Administración</h1>
+
+  <% if (reservas.length === 0) { %>
+    <p>No hay reservas registradas.</p>
+  <% } else { %>
+    <table class="reservas-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Número</th>
+          <th>Personas</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% reservas.forEach((reserva, index) => { %>
+          <tr>
+            <td><%= reserva.name %></td>
+            <td><%= reserva.date %></td>
+            <td><%= reserva.time %></td>
+            <td><%= reserva.num %></td>
+            <td><%= reserva.guests %></td>
+            <td>
+              <form action="/admin/delete" method="POST">
+                <input type="hidden" name="index" value="<%= index %>">
+                <button type="submit">Eliminar</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
     </table>
+  <% } %>
+
+  <a href="/logout" class="logout-btn">Cerrar sesión</a>
 </body>
 </html>
