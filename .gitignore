@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Archivos de entorno (NUNCA subas .env real)
+.env
+.env.*.local
+
+# Archivos de log
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales / cache
+*.tmp
+*.swp
+*.swo
+.cache/
+
+# VS Code settings
+.vscode/
+
+# Reservas locales (si no querés subir los datos reales)
+reservas.json

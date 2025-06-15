@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sakura & Gaucho: Restaurante de fusión japonesa-argentina en Córdoba. Sushi, ramen, tempura y más. Reservá tu mesa.">
+    <meta name="keywords" content="Sakura & Gaucho, sushi, ramen, comida japonesa, restaurante, Córdoba, fusión japonesa-argentina">
+    <meta name="author" content="Carlos Kishimoto">
+    <meta http-equiv="Content-Language" content="es">
+
+
+    <meta property="og:title" content="Sakura & Gaucho - Fusión japonesa-argentina">
+    <meta property="og:description" content="Restaurante en Córdoba que une lo mejor de la cocina japonesa y argentina.">
+    <meta property="og:image" content="https://tu-dominio.com/Sources/Logo/logo.png">
+    <meta property="og:url" content="https://tu-dominio.com">
+    <meta property="og:type" content="website">
+
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sakura & Gaucho - Restaurante de Fusión">
+    <meta name="twitter:description" content="Viví la experiencia de la cocina japonesa en Córdoba.">
+    <meta name="twitter:image" content="https://tu-dominio.com/Sources/Logo/logo.png">
+
+
+    <link rel="icon" href="Sources/Logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+
+    <title>Restaurante Sakura & Gaucho</title>
+</head>
+<body>
+    <header class="header">
+        <img src="Sources/Menu-hamburguesa.png" alt="Menu hamburguesa" class="menu-icon" id="menu-icon">
+        
+        <nav class="nav" id="nav">
+            <button class="close-btn" id="close-btn">&times;</button>
+            <ul class="nav-options">
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre nosotros</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reserve">Reserva</a></li>
+                <li><a href="#contact">Ubicación y contacto</a></li>
+            </ul>
+        </nav>
+        <img src="Sources/Logo/logo.png" alt="logo Sakura & Gaucho" class="logo">
+    </header>
+
+    <main class="main-content">
+        <section id="home" class="home-section">
+            <div>
+                <h1>Bienvenido a Sakura & Gaucho</h1>
+                <p>Disfruta de la mejor comida japonesa en un ambiente acogedor.</p>
+            </div>
+            <a href="#reserve">¡Reserva tu mesa ya!</a>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>Sobre nosotros</h2>
+            <p class="primer-parrafo">Sakura & Gaucho nació de una idea de Carlos Kishimoto, quien nació en Argentina, hijo de una mujer japonesa se crió en Córdoba. Desde niño tuvo un gran interés por la cocina, por lo que cuando creció creó un pequeño restaurante que combinaba los famosos platos argentinos con la variada gastronomía japonesa. Luego de varios años de trabajo duro, Sakura & Gaucho se ha convertido en un lugar de referencia para los amantes de la comida japonesa en Argentina.</p>
+            <p>En Sakura & Gaucho, nos enorgullece ofrecer una experiencia culinaria única que combina la frescura de los ingredientes japoneses con la calidez de la hospitalidad Argentina. Nuestro menú está diseñado para satisfacer todos los gustos, desde sushi y sashimi hasta ramen y tempura.</p>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <h2>Menú</h2>
+            <section id="menu-categories" class="menu-categories">
+                <h3>Entrada</h3>
+
+                <ul class="menu-entrada">
+                    <li><h4>Choclo con papas</h4><img src="Sources/Platos/Entrada/choclo_con_papas.jpg" alt="Entrada Choclo con papas"></li>
+
+                    <li><h4>Canapé de sushi de queso y salmon</h4><img src="Sources/Platos/Entrada/Canapé_de_salmon_con_queso.jpg" alt="Entrada Canapé de sushi de queso y salmon"></li>
+                </ul>
+                <h3>Plato principal</h3>
+
+                <ul class="menu-principal">
+                    <li><h4>Ramen de pollo</h4><img src="Sources/Platos/Principal/Ramen_de_Pollo.jpg" alt="Principal Ramen de pollo"></li>
+
+                    <li><h4>Tempura de verduras</h4><img src="Sources/Platos/Principal/Tempura_de_verdura.jpg" alt="Principal Tempura de verdura"></li>
+
+                    <li><h4>Sushi variado</h4><img src="Sources/Platos/Principal/sushi.jpg" alt="Principal Sushi variado"></li>
+                </ul>
+
+                <h3>Postre</h3>
+
+                <ul class="menu-postre">
+                    <li><h4>Helado de té verde</h4><img src="Sources/Platos/Postre/Helado_de_té_verde.jpeg" alt="Postre Helado de te verde"></li>
+
+                    <li><h4>Frutas frescas con miel</h4><img src="Sources/Platos/Postre/frutas_frescas_con_miel.jpg" alt="Postre Frutas frescas con miel"></li>
+                </ul>
+            </section>
+        </section>
+
+        <section id="reserve" class="reserve-section">
+            <h2>Reservá tu mesa</h2>
+            <form action="/reserve" method="post" class="reservation-form" id="reservation-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="ej: Juan Hidalgo" required>
+
+                <label for="date">Fecha:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Hora:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="num">Numero(+54) sin espacios:</label>
+                <input type="text" id="num" name="num" maxlength="10" placeholder="1231234567890"  required aria-invalid="false">
+
+                <label for="guests">Numero de personas:</label>
+                <input type="number" id="guests" name="guests" min="1" max="20" placeholder="4" required>
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Ubicación y contacto</h2>
+            <p>Estamos ubicados en el corazón de Córdoba, Argentina. Puedes visitarnos en:</p>
+            <address id="address" class="contact-address">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d108969.73190419203!2d-64.21126!3d-31.405746000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432987a4447cbeb%3A0x7abfd407da634c!2sParque%20Las%20Heras%20-%20Elisa!5e0!3m2!1ses!2sar!4v1748790988387!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                Teléfono: <p>+54 9 1234-5678</p>
+                Email: <a href="mailto:SakurayGaucho@gmail.com">SakurayGaucho@gmail.com</a>
+                Redes sociales:
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/Sakura & Gaucho">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/Sakura & Gaucho">Instagram</a></li>
+                    <li><a href="https://www.twitter.com/Sakura & Gaucho">Twitter</a></li>
+                </ul>
+                
+            </address>
+        </section>
+     </main>
+     <footer class="footer">
+        <p>&copy; 2023 Sakura & Gaucho. Todos los derechos reservados.</p>
+        <p>Desarrollado por Carlos Kishimoto</p>
+        <p>Contacto: <a href="mailto:SakurayGaucho@gmail.com">SakurayGaucho@gmail.com</a></p>
+     </footer>
+</body>
+<script src="JS/script.js"></script>
+</html>

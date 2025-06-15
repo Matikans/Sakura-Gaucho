@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+</head>
+<body>
+    <h1>Reservas</h1>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <tr>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Número de Mesa</th>
+        <th>Número de Invitados</th>
+      </tr>
+       <% reservas.forEach(reserva => { %>
+      <tr>
+        <td><%=reserva.name %></td>
+        <td><%=reserva.date%></td>
+        <td><%=reserva.time%></td>
+        <td><%=reserva.num%></td>
+        <td><%=reserva.guests%></td>
+      </tr>
+  <%})%>
+    </table>
+</body>
+</html>
